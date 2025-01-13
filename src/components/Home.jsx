@@ -7,6 +7,7 @@ import Header from './partials/Header';
 import HorizontalCards from './partials/HorizontalCards';
 import Dropdown from './partials/Dropdown';
 
+
 const Home = () => {
     document.title = "Movie App | Homepage";
     const [wallpaper, setwallpaper] = useState(null);
@@ -70,7 +71,9 @@ const Home = () => {
                 <HorizontalCards data={trending} />
             </div>
         </>
-    ) : <h1>loading</h1>
+    ) :( 
+    <h1>Loading.....</h1>
+    );
 };
 
 export default Home;
