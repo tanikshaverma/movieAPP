@@ -13,7 +13,7 @@ import Notfound from "./components/Notfound";
 
 const App = () => {
   return (
-    <div className=" bg-[#1F1E24] w-screen flex">
+    <div className=" bg-[#1F1E24] w-screen flex ">
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -21,7 +21,7 @@ const App = () => {
         <Route path="/popular" element={<Popular />} />
         <Route path="/movie" element={<Movie />} />
         <Route path="/movie/details/:id" element={<Moviedetails />} >
-        <Route path="/movie/details/:id/trailer" element= {<Trailer />} />
+          <Route path="/movie/details/:id/trailer" element={<Trailer />} />
 
         </Route>
         <Route path="/tv" element={<Tvshows />} />
@@ -31,7 +31,7 @@ const App = () => {
         </Route>
         <Route path="/person" element={<People />} />
         <Route path="/person/details/:id" element={<PersonDetails />} />
-        <Route path="*" element= {<Notfound />} />
+        <Route path="*" element={<Notfound />} />
 
 
       </Routes>
