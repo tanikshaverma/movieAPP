@@ -33,9 +33,10 @@ const Topnav = () => {
         <i onClick={() => setquery("")} className=" text-zinc-400 text-3xl ri-close-fill right-0"></i>
       )};
 
-      <div className='absolute w-[50%] max-h-[50vh] bg-zinc-200 top-[100%]  left-[5%] overflow-auto'>
+      <div className=' z-[100] absolute w-[50%] max-h-[50vh] bg-zinc-200 top-[100%]  left-[5%] overflow-auto'>
         {searches.map((s, i) => (
-          <Link key={i} className=' hover:text-black hover:bg-zinc-300  duration-300 font-semibold text-zinc-600 w-[100%] p-10 flex justify-start items-center border-b-2 border-zinc-100'>
+          <Link to={`/${s.media_type}/details/${s.id}`}
+           key={i} className=' hover:text-black hover:bg-zinc-300  duration-300 font-semibold text-zinc-600 w-[100%] p-10 flex justify-start items-center border-b-2 border-zinc-100'>
             <img className='w-[10vh] object-cover rounded mr-5 shadow-lg'
               src={s.backdrop_path || s.profile_path ? `https://image.tmdb.org/t/p/original/${s.backdrop_path || s.profile_path}` : noimage} alt="" />
             <span>{s.name || s.title || s.original_name || s.original_title}</span>

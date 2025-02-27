@@ -6,6 +6,7 @@ import Topnav from './partials/Topnav'
 import Dropdown from './partials/Dropdown'
 import Cards from './partials/Cards'
 import InfiniteScroll from 'react-infinite-scroll-component'
+import Loading from './Loading';
 
 
 const Tvshows = () => {
@@ -57,7 +58,7 @@ const Tvshows = () => {
             <div className='px-[5%] w-full flex items-center justify-between'>
                 <h1 className='  text-2xl font-semibold text-zinc-400'>
                     <i onClick={() => navigate(-1)} className=" hover:text-[#cd1b84] ri-arrow-left-line"></i>
-                    tv<small className='ml-2 text-sm text-zinc-600'>({category})</small>
+                    Tv<small className='ml-2 text-sm text-zinc-600'>({category})</small>
                 </h1>
 
                 <div className='flex items-center w-[80%]'>
@@ -83,14 +84,14 @@ const Tvshows = () => {
                 hasMore={hasMore}
                 loader={<h1>loading.....</h1>}>
 
-                <Cards data={tv} title={category} />
+                <Cards data={tv} title="tv" />
             </InfiniteScroll>
 
 
         </div>
-    ) : (<loading />
+    ) : (<Loading />);
 
-    );
+  
 }
 
 export default Tvshows

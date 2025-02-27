@@ -6,6 +6,7 @@ import Dropdown from './partials/Dropdown'
 import axios from '../utils/axios'
 import Cards from './partials/Cards'
 import InfiniteScroll from 'react-infinite-scroll-component'
+import Loading from './Loading'
 
 const Trend = () => {
   document.title = "Movie App | Trend";
@@ -87,7 +88,7 @@ sethasMore(false);
 
 
     </div>
-  ) : (<loading />
+  ) : (<Loading />
 
   );
 }

@@ -6,6 +6,7 @@ import Topnav from './partials/Topnav'
 import Dropdown from './partials/Dropdown'
 import Cards from './partials/Cards'
 import InfiniteScroll from 'react-infinite-scroll-component'
+import Loading from './Loading';
 
 const Movie = () => {
     document.title = "Movie App | Movies";
@@ -83,14 +84,12 @@ const Movie = () => {
                 hasMore={hasMore}
                 loader={<h1>loading.....</h1>}>
 
-                <Cards data={movie} title={category} />
+                <Cards data={movie} title="movie" />
             </InfiniteScroll>
 
 
         </div>
-    ) : (<loading />
-
-    );
+    ) : (<Loading />);
 }
 
 export default Movie

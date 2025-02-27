@@ -7,6 +7,7 @@ import Topnav from './partials/Topnav'
 import Dropdown from './partials/Dropdown'
 import Cards from './partials/Cards'
 import InfiniteScroll from 'react-infinite-scroll-component'
+import Loading from './Loading';
 
 
 
@@ -89,7 +90,7 @@ const Popular = () => {
 
 
         </div>
-    ) : (<loading />
+    ) : (<Loading />
 
     );
 }

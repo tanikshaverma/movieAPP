@@ -6,6 +6,7 @@ import Topnav from './partials/Topnav'
 import Dropdown from './partials/Dropdown'
 import Cards from './partials/Cards'
 import InfiniteScroll from 'react-infinite-scroll-component'
+import Loading from './Loading';
 
 const People = () => {
     document.title = "Movie App | person Shows";
@@ -57,7 +58,7 @@ const People = () => {
             <div className='px-[5%] w-full flex items-center justify-between'>
                 <h1 className='  text-2xl font-semibold text-zinc-400'>
                     <i onClick={() => navigate(-1)} className=" hover:text-[#cd1b84] ri-arrow-left-line"></i>
-                    People<small className='ml-2 text-sm text-zinc-600'>({category})</small>
+                    People
                 </h1>
 
                 <div className='flex items-center w-[80%]'>
@@ -74,12 +75,12 @@ const People = () => {
                 hasMore={hasMore}
                 loader={<h1>loading.....</h1>}>
 
-                <Cards data={person} title={category} />
+                <Cards data={person} title="person" />
             </InfiniteScroll>
 
 
         </div>
-    ) : (<loading />
+    ) : (<Loading />
 
     );
 }
