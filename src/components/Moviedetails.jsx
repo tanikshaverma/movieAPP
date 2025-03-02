@@ -32,7 +32,7 @@ const Moviedetails = () => {
       backgroundRepeat: 'no-repeat',
 
     }}
-      className=' relative w-screen h-[140vh] px-[10%]'>
+      className=' relative w-screen h-[150vh] px-[10%]'>
 
 
       {/* part 1 navigation  */}

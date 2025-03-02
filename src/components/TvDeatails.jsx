@@ -33,7 +33,7 @@ const tvdetails = () => {
       backgroundRepeat: 'no-repeat',
 
     }}
-      className=' relative w-screen h-[197vh] px-[10%]'>
+      className=' relative w-screen h-[199vh] px-[10%]'>
 
 
       {/* part 1 navigation  */}
