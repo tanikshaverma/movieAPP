@@ -23,7 +23,11 @@ const Header = ({ data }) => {
                 <i className="ml-5 text-yellow-500 ri-album-fill"></i>{""}{data.media_type.toUpperCase()}
             </p>
             <Link to={`/${data.media_type}/details/${data.id}/trailer`} className=' mt-5 bg-[#cd1b84] p-4 rounded text-white font-semibold '>
+<<<<<<< HEAD
                 Watch Trailer
+=======
+                Wacth Trailer
+>>>>>>> 29eeafc0157b962c393212c679a671b2dc557051
             </Link>
         </div>
     );
